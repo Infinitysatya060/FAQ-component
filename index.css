@@ -1,0 +1,131 @@
+:root {
+  --violet: hsl(273, 75%, 66%);
+  --blue: hsl(240, 73%, 65%);
+  --grayish-blue: hsl(240, 6%, 50%);
+  --Verydarkgrayishblue: hsl(237, 12%, 33%);
+  --font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: var(--font-size);
+}
+body {
+  margin: 0;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(273, 75%, 66%));
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.main-wraper {
+  background: white;
+  height: 509px;
+  width: 920px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 4rem;
+  background-image: url("bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 1260% 65%;
+}
+.answer {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.accordion_wraapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.question_answer {
+  border-bottom: 1px solid #e8e8ea;
+  margin-right: 70px;
+}
+.img2 {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+.img3 {
+  position: absolute;
+  top: 309px;
+  left: 200px;
+}
+.title_accordion {
+  font-size: 3rem;
+  margin-top: 0px;
+}
+.question-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.4rem 0rem;
+  color: var(--Verydarkgrayishblue);
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.question img {
+  align-self: center;
+}
+.btn {
+  transform: rotate(180deg);
+}
+.img4 {
+  display: none;
+}
+.img5{
+    display: none;
+}
+@media screen and (max-width: 930px) {
+  .accordion_wraapper {
+    justify-content: center;
+    margin-top: 45%;
+  }
+  .main-wraper {
+    display: block;
+    width: 400px;
+    padding-left: 40px;
+    height: auto;
+    margin-top: 80px;
+    text-align: center;
+    
+  }
+
+  .img2 {
+    display: none;
+  }
+  .img3 {
+    display: none;
+  }
+  .img4 {
+    display: block;
+    position: absolute;
+    top: -10px;
+    height: 300px;
+    width: 300px;
+  }
+
+  .img5{
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: 150px;
+    
+  }
+  .title_accordion {
+    text-align: center;
+    position: relative;
+    left: -20px;
+
+  }
+}
